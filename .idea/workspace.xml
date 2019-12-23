@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf048441-ff28-4c8b-880b-fd01ef2e3a9e" name="Default Changelist" comment="" />
+    <list default="true" id="bf048441-ff28-4c8b-880b-fd01ef2e3a9e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Client.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +29,9 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -114,6 +120,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1V4pOrSv5XxayAIbkIAXwBbwENn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -122,7 +129,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../api.getecmob" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -165,7 +172,9 @@
       <workItem from="1576771351719" duration="125000" />
       <workItem from="1576771562577" duration="13439000" />
       <workItem from="1576848995208" duration="15123000" />
-      <workItem from="1576932363177" duration="2229000" />
+      <workItem from="1576932363177" duration="2933000" />
+      <workItem from="1577121778864" duration="2495000" />
+      <workItem from="1577126592936" duration="4646000" />
     </task>
     <servers />
   </component>
@@ -177,10 +186,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="428" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1576776707578" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1576933692400">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1577124107161">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1576933692400" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1577124107161" />
     <state x="457" y="177" key="NewPhpClassDialog" timestamp="1576782592186">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
