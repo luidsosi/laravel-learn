@@ -15,6 +15,12 @@ class CreateOrderItemsTable extends Migration
     {
         Schema::create('order_items', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('item');
+            $table->float('price');
+            $table->integer('quantity');
+            $table->float('total');
+            $table->integer('idOrder');
+            $table->foreign('idOrder')->references('id')->on('orders');
             $table->timestamps();
         });
     }
