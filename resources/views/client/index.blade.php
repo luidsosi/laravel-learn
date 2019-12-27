@@ -16,6 +16,8 @@
         @foreach ($clients as $client)
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 {{ $client->name }}
+
+                <a href="#" class="btn btn-info btn-sm"></a>
                 <form method="post" action="/client/{{ $client->id }}" onsubmit="return confirm('Tem certeza que deseja excluir {{ addslashes($client->name) }}?')">
                     @csrf
                     @method('DELETE')

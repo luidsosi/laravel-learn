@@ -31,11 +31,12 @@ class ClientController extends Controller
         $quantidadeitensPedido = $request->qtd_itens_pedido;
 
         for ($i = 1; $i <= $quantidadePedidos; $i++) {
-            $newOrder = $newClient->orders()->create(['idClient' => $newClient->id, 'valueTotal' => $i]);
+            $newOrder = $newClient->orders()->create([
+                'valueTotal' => $i
+            ]);
 
             for ($j = 1; $j <= $quantidadeitensPedido; $j++) {
                 $newOrderItem = $newOrder->orderItems()->create([
-                    'idOrder' => $newOrder->id,
                     'item' => $j,
                     'price' => $j,
                     'quantity' => $i,
