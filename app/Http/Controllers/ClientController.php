@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Client;
+use App\Dao\ClientDao;
 use App\Http\Requests\ClientFormRequest;
-use Illuminate\Database\Schema\Blueprint;
+use App\Order;
+use App\OrderItem;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -21,29 +23,9 @@ class ClientController extends Controller
         return view('client.create');
     }
 
-    public function store(ClientFormRequest $request)
+    public function store(ClientFormRequest $request, ClientDao $clientDao)
     {
-        $newClient = Client::create([
-            'name' => $request->nome
-        ]);
-
-        $quantidadePedidos = $request->qtd_pedidos;
-        $quantidadeitensPedido = $request->qtd_itens_pedido;
-
-        for ($i = 1; $i <= $quantidadePedidos; $i++) {
-            $newOrder = $newClient->orders()->create([
-                'valueTotal' => $i
-            ]);
-
-            for ($j = 1; $j <= $quantidadeitensPedido; $j++) {
-                $newOrderItem = $newOrder->orderItems()->create([
-                    'item' => $j,
-                    'price' => $j,
-                    'quantity' => $i,
-                    'total' => $i * $j
-                ]);
-            }
-        }
+        $newClient = $clientDao->create($request->nome, $request->qtd_pedidos, $request->qtd_itens_pedido);
 
         $request->session()->flash('message', "O novo cliente {$newClient->name} foi inserido com sucesso!");
 
@@ -52,8 +34,15 @@ class ClientController extends Controller
 
     public function delete(Request $request)
     {
-        Client::destroy($request->id);
-        $request->session()->flash('message', "O cliente foi removido com sucesso!");
+        $client = Client::find($request->id);
+        $client->orders->each(function (Order $order) {
+            $order->orderItems->each(function (OrderItem $orderItem) {
+                $orderItem->delete();
+            });
+            $order->delete();
+        });
+        $client->delete();
+        $request->session()->flash('message', "O cliente $client->name foi removido com sucesso!");
         return redirect('/client');
     }
 }

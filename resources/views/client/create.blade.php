@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-    Clientes
+    Adicionar Cliente
 @endsection
 
 @section('body')

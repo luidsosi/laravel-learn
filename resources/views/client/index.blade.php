@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-    Adicionar Clientes
+    Lista de Clientes
 @endsection
 
 @section('body')
@@ -16,13 +16,15 @@
         @foreach ($clients as $client)
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 {{ $client->name }}
-
-                <a href="#" class="btn btn-info btn-sm"></a>
-                <form method="post" action="/client/{{ $client->id }}" onsubmit="return confirm('Tem certeza que deseja excluir {{ addslashes($client->name) }}?')">
+                <span class="d-flex">
+                <a href="/client/{{ $client->id }}/orders" class="btn btn-info btn-sm mr-1">Editar</a>
+                <form method="post" action="/client/{{ $client->id }}"
+                      onsubmit="return confirm('Tem certeza que deseja excluir {{ addslashes($client->name) }}?')">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger btn-sm">Excluir</button>
                 </form>
+                </span>
             </li>
         @endforeach
     </ul>
