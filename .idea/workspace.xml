@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf048441-ff28-4c8b-880b-fd01ef2e3a9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Dao/ClientDao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/order/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Dao/ClientDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Dao/ClientDao.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/client/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/client/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +181,8 @@
       <workItem from="1577381388252" duration="7745000" />
       <workItem from="1577468235259" duration="10117000" />
       <workItem from="1577726516721" duration="2852000" />
-      <workItem from="1577985128636" duration="8628000" />
+      <workItem from="1577985128636" duration="9055000" />
+      <workItem from="1578071511999" duration="8035000" />
     </task>
     <servers />
   </component>
@@ -201,14 +198,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="91" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1577381367942" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1577995587051">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578074490533">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1577995587051" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1577731265968">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1578074490533" />
+    <state x="424" y="0" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#function0" timestamp="1578076020121">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1577731265968" />
+    <state x="424" y="0" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#function0/0.0.1366.728@0.0.1366.728" timestamp="1578076020121" />
+    <state x="424" y="0" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1578076082524">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="424" y="0" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.1366.728@0.0.1366.728" timestamp="1578076082524" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1578073390648">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1578073390648" />
     <state x="457" y="177" key="NewPhpClassDialog" timestamp="1577995490810">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

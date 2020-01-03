@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Client;
 use App\Dao\ClientDao;
 use App\Http\Requests\ClientFormRequest;
-use App\Order;
-use App\OrderItem;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -32,16 +30,10 @@ class ClientController extends Controller
         return redirect('/client');
     }
 
-    public function delete(Request $request)
+    public function delete(Request $request, ClientDao $clientDao)
     {
-        $client = Client::find($request->id);
-        $client->orders->each(function (Order $order) {
-            $order->orderItems->each(function (OrderItem $orderItem) {
-                $orderItem->delete();
-            });
-            $order->delete();
-        });
-        $client->delete();
+        $client = $clientDao->delete($request->id);
+
         $request->session()->flash('message', "O cliente $client->name foi removido com sucesso!");
         return redirect('/client');
     }
