@@ -38,9 +38,31 @@
     </ul>
     <script>
         function toggleInput(clientId) {
-            console.log(e.target);
-            document.getElementById(`name-client-${clientId}`).hidden = true;
-            document.getElementById(`input-name-client-${clientId}`).removeAttribute('hidden');
+            const clientName = document.getElementById(`name-client-${clientId}`);
+            const inputClient = document.getElementById(`input-name-client-${clientId}`);
+            if(clientName.hasAttribute('hidden')){
+                inputClient.hidden = true;
+                clientName.removeAttribute('hidden');
+            } else {
+                clientName.hidden = true;
+                inputClient.removeAttribute('hidden');
+            }
+        }
+
+        function editClient(clientId) {
+            const newName = document.querySelector(`#input-name-client-${clientId} > input`).value;
+            const token = document.querySelector(`input[name="_token"]`).value;
+
+            let formData = new FormData();
+            formData.append('name', newName);
+            formData.append('_token', token);
+
+            const url = `/client/${clientId}/edit`;
+
+            fetch(url, {
+                body: formData,
+                method: 'POST'
+            })
         }
     </script>
 @endsection

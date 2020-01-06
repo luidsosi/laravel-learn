@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::get('/client', 'ClientController@index');
 Route::get('/client/create', 'ClientController@create');
 Route::post('/client/create', 'ClientController@store');
+Route::post('/client/{id}/edit', 'ClientController@edit');
 Route::delete('/client/{id}', 'ClientController@delete');
 Route::get('/order/create', 'OrderController@create');
 Route::post('/order/create', 'OrderController@store');
