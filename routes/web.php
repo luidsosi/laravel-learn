@@ -23,3 +23,4 @@ Route::delete('/client/{id}', 'ClientController@delete');
 Route::get('/order/create', 'OrderController@create');
 Route::post('/order/create', 'OrderController@store');
 Route::get('/client/{clientId}/orders', 'OrderController@index');
+Route::get('/order/{order}/items', 'OrderItemController@index');

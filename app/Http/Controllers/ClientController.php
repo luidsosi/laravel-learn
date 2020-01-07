@@ -37,4 +37,12 @@ class ClientController extends Controller
         $request->session()->flash('message', "O cliente $client->name foi removido com sucesso!");
         return redirect('/client');
     }
+
+    public function edit(Request $request, int $id)
+    {
+        $newName = $request->name;
+        $client = Client::find($id);
+        $client->name = $newName;
+        $client->save();
+    }
 }

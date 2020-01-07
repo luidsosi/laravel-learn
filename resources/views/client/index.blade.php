@@ -40,7 +40,7 @@
         function toggleInput(clientId) {
             const clientName = document.getElementById(`name-client-${clientId}`);
             const inputClient = document.getElementById(`input-name-client-${clientId}`);
-            if(clientName.hasAttribute('hidden')){
+            if (clientName.hasAttribute('hidden')) {
                 inputClient.hidden = true;
                 clientName.removeAttribute('hidden');
             } else {
@@ -62,7 +62,10 @@
             fetch(url, {
                 body: formData,
                 method: 'POST'
-            })
+            }).then(() => {
+                document.getElementById(`name-client-${clientId}`).textContent = newName;
+                toggleInput(clientId);
+            });
         }
     </script>
 @endsection
