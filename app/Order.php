@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
@@ -16,5 +17,12 @@ class Order extends Model
     public function client()
     {
         return $this->belongsTo(Client::class, 'idClient');
+    }
+
+    public function getOrderItemsChecked(): Collection
+    {
+        return $this->orderItems->filter(function (OrderItem $item) {
+            return $item->checked;
+        });
     }
 }

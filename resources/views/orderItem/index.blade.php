@@ -10,12 +10,13 @@
             {{ $message }}
         </div>
     @endif
-    <form action="">
+    <form action="/order/{{ $order->id }}/orderItems/check">
+        @csrf
         <ul class="list-group">
             @foreach ($orderItems as $item)
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     Item {{ $item->id }}
-                    <input type="checkbox">
+                    <input type="checkbox" name="orderItems[]" value="{{ $item->id }}"  {{$item->checked ? 'checked' : ''}}>
                 </li>
             @endforeach
         </ul>

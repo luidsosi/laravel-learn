@@ -15,7 +15,7 @@
         @foreach ($orders as $order)
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 <a href="/order/{{ $order->id }}/items">Pedido {{ $order->id }}</a>
-                <span class="badge badge-secondary">{{ $order->orderItems->count() }}</span>
+                <span class="badge badge-secondary">{{ $order->getOrderItemsChecked()->count() }}/{{ $order->orderItems->count() }}</span>
             </li>
         @endforeach
     </ul>

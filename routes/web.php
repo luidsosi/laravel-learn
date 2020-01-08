@@ -24,3 +24,8 @@ Route::get('/order/create', 'OrderController@create');
 Route::post('/order/create', 'OrderController@store');
 Route::get('/client/{clientId}/orders', 'OrderController@index');
 Route::get('/order/{order}/items', 'OrderItemController@index');
+Route::get('/order/{order}/orderItems/check', 'OrderItemController@check');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
