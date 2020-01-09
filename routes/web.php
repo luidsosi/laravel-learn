@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/client', 'ClientController@index');
+Route::get('/client', 'ClientController@index')->middleware('auth');
 Route::get('/client/create', 'ClientController@create');
 Route::post('/client/create', 'ClientController@store');
 Route::post('/client/{id}/edit', 'ClientController@edit');
@@ -29,3 +29,8 @@ Route::get('/order/{order}/orderItems/check', 'OrderItemController@check');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/entrar', 'EntrarController@index');
+Route::post('/entrar', 'EntrarController@entrar');
+Route::get('/registrar', 'RegistrarController@create');
+Route::post('/registrar', 'RegistrarController@store');
